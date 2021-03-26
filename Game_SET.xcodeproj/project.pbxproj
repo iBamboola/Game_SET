@@ -71,17 +71,17 @@
 			isa = PBXGroup;
 			children = (
 				D9E2A9552574E7FB00690B76 /* Supprot files */,
-				D9E2A9452574E7D600690B76 /* ViewController.swift */,
 				D9C921A92599FE01008CE6CB /* SquiggleShape.swift */,
 				D940E1F6259366EA0045175D /* Grid.swift */,
 				D9E2A9472574E7D600690B76 /* Main.storyboard */,
 				D929C2132575264C00853D4E /* Cards.swift */,
 				D94054AC257BED8E00CB08A7 /* PersonalAttributesOfCard.swift */,
 				D929C2152575297A00853D4E /* Set.swift */,
-				D90A6B572593683700136FCC /* PlayingCardView.swift */,
-				D9F78B7925CAD4FE00FB296D /* ShapeView.swift */,
 				D9E2A94A2574E7D800690B76 /* Assets.xcassets */,
 				D9E2A94F2574E7D800690B76 /* Info.plist */,
+				D90A6B572593683700136FCC /* PlayingCardView.swift */,
+				D9F78B7925CAD4FE00FB296D /* ShapeView.swift */,
+				D9E2A9452574E7D600690B76 /* ViewController.swift */,
 			);
 			path = Game_SET;
 			sourceTree = "<group>";

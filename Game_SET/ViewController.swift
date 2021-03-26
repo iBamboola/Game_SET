@@ -16,9 +16,11 @@ class ViewController: UIViewController {
             makeSet()
         }
     }
+    
     private var pickedCardsIsSet = false
     
     
+    private var gridForCards = Grid(layout: .aspectRatio(2.0), frame: CGRect(x: 16.0, y: 44.0, width: 398.0, height: 600.0))
     
     @IBOutlet var cardButtons: [UIButton]!
     @IBOutlet weak var statsLabel: UILabel!
@@ -153,10 +155,35 @@ class ViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initilizeViewFromModel()
         refreshViewFromModel()
+        
+        gridForCards.cellCount = 2
+        addSomeViewsToGrid()
+    }
+    
+    
+    
+    private func addSomeViewsToGrid() {
+
+        var rect = gridForCards[0]!
+        let playingCard = PlayingCardView(frame: rect, shape: .diamond, color: .systemRed, filiing: .full, amount: 1)
+//        playingCard.shape = .diamond
+//        playingCard.color = .systemRed
+//        playingCard.filling = .full
+//        playingCard.amountOfShapes = 1
+        view.addSubview(playingCard)
+        
+        rect = gridForCards[1]!
+        playingCard.bounds = rect
+        playingCard.shape = .squiggle
+        playingCard.color = .systemBlue
+        playingCard.filling = .semi
+        playingCard.amountOfShapes = 2
+        view.addSubview(playingCard)
     }
     
     private func refreshViewFromModel() {

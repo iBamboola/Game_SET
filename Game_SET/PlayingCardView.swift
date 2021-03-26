@@ -34,18 +34,23 @@ class PlayingCardView: UIView {
         
     }
     
-//    init(frame: CGRect, shape: ShapeView.Shapes, color: UIColor, filling: ShapeView.Fillings, amount: Int) {
-//        super.init(frame: frame)
-//
-//        self.shape = shape
-//        self.color = color
-//        self.filling = filling
-//      self.amountOfShapes = amount
-//    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = .black
+    }
     
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    convenience init(frame: CGRect, shape: ShapeView.Shapes, color: UIColor, filiing: ShapeView.Fillings, amount: Int) {
+        self.init(frame: frame)
+        self.shape = shape
+        self.color = color
+        self.filling = filling
+        self.amountOfShapes = amount
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+//        fatalError("PlayingCardView's init(coder:) has not been implemented")
+    }
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
